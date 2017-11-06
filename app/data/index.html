@@ -1,128 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mirror">
 
 <head>
 	<meta charset="utf-8">
-	<title>Hello World</title>
+	<title>Mirror</title>
 	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 </head>
 
 <body>
-		<div class="col-md-4 col-md-offset-8" style=" padding: 30px 50px 0 0;">
+	<div class="col-md-4 col-md-offset-8" style=" padding: 30px 50px 0 0;">
 
-			<div class="row">
-				<div class="col-md-12 col-xlg-6">
-					<div class="row m-t-20">
-						<div class="col-md-5">
-							<h4 class="no-margin" style="line-height: 24px;">Monday</h4>
-							<p class="small hint-text m-t-5">9th August 2014</p>
-						</div>
-						<div class="col-md-7">
-							<div class="pull-left">
-								<p class="small hint-text no-margin">Currently</p>
-								<h4 class="text-danger bold no-margin">32°
-								</h4>
-							</div>
-							<div class="pull-right">
-								<canvas height="64" width="64" class="clear-day"></canvas>
-							</div>
-						</div>
+		<div class="row">
+			<div class="col-md-12 col-xlg-6" ng-controller="WeatherCtrl as weather">
+				<div class="row m-t-20">
+					<div class="col-md-5">
+						<h4 class="no-margin" style="line-height: 24px;">{{weather.day}}</h4>
+							<p class="small hint-text m-t-5">{{weather.date}}</p>
 					</div>
-					<h5>Feels like
-						<span class="semi-bold">rainy</span>
-					</h5>
-
-					<div class="row m-t-10 timeslot">
-						<div class="col-xs-2 p-t-10 text-center">
-							<p class="small">13:30</p>
-							<canvas height="25" width="25" class="partly-cloudy-day"></canvas>
-							<p class="text-danger bold">30°C</p>
+					<div class="col-md-7">
+						<div class="pull-left">
+							<p class="small hint-text no-margin">Currently</p>
+							<h4 class="text-danger bold no-margin">32°
+							</h4>
 						</div>
-						<div class="col-xs-2 p-t-10 text-center">
-							<p class="small">14:00</p>
-							<canvas height="25" width="25" class="cloudy"></canvas>
-							<p class="text-danger bold">30°C</p>
-						</div>
-						<div class="col-xs-2 p-t-10 text-center">
-							<p class="small">14:30</p>
-							<canvas height="25" width="25" class="rain"></canvas>
-							<p class="text-danger bold">30°C</p>
-						</div>
-						<div class="col-xs-2 p-t-10 text-center">
-							<p class="small">15:00</p>
-							<canvas height="25" width="25" class="sleet"></canvas>
-							<p class="text-danger bold">30°C</p>
-						</div>
-						<div class="col-xs-2 p-t-10 text-center">
-							<p class="small">15:30</p>
-							<canvas height="25" width="25" class="snow"></canvas>
-							<p class="text-danger bold">30°C</p>
-						</div>
-						<div class="col-xs-2 p-t-10 text-center">
-							<p class="small">16:00</p>
-							<canvas height="25" width="25" class="wind"></canvas>
-							<p class="text-danger bold">30°C</p>
+						<div class="pull-right">
+							<canvas height="64" width="64" class="clear-day"></canvas>
 						</div>
 					</div>
 				</div>
-				<div class="col-xlg-6 visible-xlg">
-					<div class="row">
-						<div class="forecast-day col-md-6 text-center m-t-10 ">
-							<div class="bg-master-lighter p-b-10 p-t-10">
-								<h4 class="p-t-10 no-margin">Tuesday</h4>
-								<p class="small hint-text m-b-20">11th Augest 2014</p>
-								<canvas class="rain" width="64" height="64"></canvas>
-								<h5 class="text-danger">32°</h5>
-								<p>Feels like
-									<span class="bold">sunny</span>
-								</p>
-								<p class="small">Wind
-									<span class="bold p-l-20">11km/h</span>
-								</p>
-								<div class="m-t-20 block">
-									<div class="padding-10">
-										<div class="row">
-											<div class="col-md-6 text-center">
-												<p class="small">Noon</p>
-												<canvas class="sleet" width="25" height="25"></canvas>
-												<p class="text-danger bold">30°C</p>
-											</div>
-											<div class="col-md-6 text-center">
-												<p class="small">Night</p>
-												<canvas class="wind" width="25" height="25"></canvas>
-												<p class="text-danger bold">30°C</p>
-											</div>
+				<h5>Feels like
+					<span class="semi-bold">rainy</span>
+				</h5>
+
+				<div class="row m-t-10 timeslot">
+					<div class="col-xs-2 p-t-10 text-center">
+						<p class="small">13:30</p>
+						<canvas height="25" width="25" class="partly-cloudy-day"></canvas>
+						<p class="text-danger bold">30°C</p>
+					</div>
+					<div class="col-xs-2 p-t-10 text-center">
+						<p class="small">14:00</p>
+						<canvas height="25" width="25" class="cloudy"></canvas>
+						<p class="text-danger bold">30°C</p>
+					</div>
+					<div class="col-xs-2 p-t-10 text-center">
+						<p class="small">14:30</p>
+						<canvas height="25" width="25" class="rain"></canvas>
+						<p class="text-danger bold">30°C</p>
+					</div>
+					<div class="col-xs-2 p-t-10 text-center">
+						<p class="small">15:00</p>
+						<canvas height="25" width="25" class="sleet"></canvas>
+						<p class="text-danger bold">30°C</p>
+					</div>
+					<div class="col-xs-2 p-t-10 text-center">
+						<p class="small">15:30</p>
+						<canvas height="25" width="25" class="snow"></canvas>
+						<p class="text-danger bold">30°C</p>
+					</div>
+					<div class="col-xs-2 p-t-10 text-center">
+						<p class="small">16:00</p>
+						<canvas height="25" width="25" class="wind"></canvas>
+						<p class="text-danger bold">30°C</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xlg-6 visible-xlg">
+				<div class="row">
+					<div class="forecast-day col-md-6 text-center m-t-10 ">
+						<div class="bg-master-lighter p-b-10 p-t-10">
+							<h4 class="p-t-10 no-margin">Tuesday</h4>
+							<p class="small hint-text m-b-20">11th Augest 2014</p>
+							<canvas class="rain" width="64" height="64"></canvas>
+							<h5 class="text-danger">32°</h5>
+							<p>Feels like
+								<span class="bold">sunny</span>
+							</p>
+							<p class="small">Wind
+								<span class="bold p-l-20">11km/h</span>
+							</p>
+							<div class="m-t-20 block">
+								<div class="padding-10">
+									<div class="row">
+										<div class="col-md-6 text-center">
+											<p class="small">Noon</p>
+											<canvas class="sleet" width="25" height="25"></canvas>
+											<p class="text-danger bold">30°C</p>
+										</div>
+										<div class="col-md-6 text-center">
+											<p class="small">Night</p>
+											<canvas class="wind" width="25" height="25"></canvas>
+											<p class="text-danger bold">30°C</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 text-center m-t-10 ">
-							<div class="bg-master-lighter p-b-10 p-t-10">
-								<h4 class="p-t-10 no-margin">Wednesday</h4>
-								<p class="small hint-text m-b-20">11th Augest 2014</p>
-								<canvas class="rain" width="64" height="64"></canvas>
-								<h5 class="text-danger">32°</h5>
-								<p>Feels like
-									<span class="bold">sunny</span>
-								</p>
-								<p class="small">Wind
-									<span class="bold p-l-20">11km/h</span>
-								</p>
-								<div class="m-t-20 block">
-									<div class="padding-10">
-										<div class="row">
-											<div class="col-md-6 text-center">
-												<p class="small">Noon</p>
-												<canvas class="sleet" width="25" height="25"></canvas>
-												<p class="text-danger bold">30°C</p>
-											</div>
-											<div class="col-md-6 text-center">
-												<p class="small">Night</p>
-												<canvas class="wind" width="25" height="25"></canvas>
-												<p class="text-danger bold">30°C</p>
-											</div>
+					</div>
+					<div class="col-md-6 text-center m-t-10 ">
+						<div class="bg-master-lighter p-b-10 p-t-10">
+							<h4 class="p-t-10 no-margin">Wednesday</h4>
+							<p class="small hint-text m-b-20">11th Augest 2014</p>
+							<canvas class="rain" width="64" height="64"></canvas>
+							<h5 class="text-danger">32°</h5>
+							<p>Feels like
+								<span class="bold">sunny</span>
+							</p>
+							<p class="small">Wind
+								<span class="bold p-l-20">11km/h</span>
+							</p>
+							<div class="m-t-20 block">
+								<div class="padding-10">
+									<div class="row">
+										<div class="col-md-6 text-center">
+											<p class="small">Noon</p>
+											<canvas class="sleet" width="25" height="25"></canvas>
+											<p class="text-danger bold">30°C</p>
+										</div>
+										<div class="col-md-6 text-center">
+											<p class="small">Night</p>
+											<canvas class="wind" width="25" height="25"></canvas>
+											<p class="text-danger bold">30°C</p>
 										</div>
 									</div>
 								</div>
@@ -131,15 +131,23 @@
 					</div>
 				</div>
 			</div>
+		</div>
 
 	</div>
 
 
 	<script src="../js/skycons.js" type="text/javascript"></script>
 	<script src="../js/jquery.js" type="text/javascript"></script>
+
 	<script>
 		(function ($) {
 			'use strict';
+
+			angular.module('mirror', [])
+				.controller('WeatherCtrl', ['$filter', function ($filter) {
+					this.day = $filter('date')(new Date(), 'EEEE');
+					this.date = $filter('date')(new Date(), 'd MMM y');
+				}]);
 
 			$(document).ready(function () {
 				var icons = new Skycons(),
