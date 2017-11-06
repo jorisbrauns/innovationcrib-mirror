@@ -1,9 +1,9 @@
 {
-  "name": "resin-electronjs",
-  "description": "electronJS-based rpi2 resin application",
+  "name": "innovationcrib-mirror",
+  "description": "Innovation Crib Magic Mirror",
   "main": "main.js",
   "authors": [
-    "Carlo Maria Curinga"
+    "Joris Brauns"
   ],
   "license": "Apache-2.0",
   "keywords": [

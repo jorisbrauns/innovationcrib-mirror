@@ -1,7 +1,7 @@
 {
-  "name": "resin-electronjs",
+  "name": "innovationcrib-mirror",
   "version": "0.2.0",
-  "description": "electronJS-based resin application",
+  "description": "Innovation Crib Magic Mirror",
   "main": "main.js",
   "scripts": {
     "dev": "NODE_ENV=development electron .",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/resin-io/resin-electronjs.git"
+    "url": "git+https://github.com/jorisbrauns/innovationcrib-mirror.git"
   },
   "keywords": [
     "resin",
@@ -20,14 +20,15 @@
   ],
   "dependencies": {
     "electron": "^1.4.15",
-    "electron-rebuild": "^1.5.7"
+    "electron-rebuild": "^1.5.7",
+    "skycons": "^1.0.0"
   },
-  "author": "Carlo Maria Curinga",
+  "author": "Joris Brauns",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/resin-io/resin-electronjs/issues"
+    "url": "https://github.com/jorisbrauns/innovationcrib-mirror/issues"
   },
-  "homepage": "https://github.com/resin-io/resin-electronjs#readme",
+  "homepage": "https://github.com/jorisbrauns/innovationcrib-mirror#readme",
   "jshintConfig": {
     "esversion": 6,
     "strict": true
