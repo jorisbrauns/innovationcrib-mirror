@@ -1,6 +1,6 @@
 angular
-    .module("mirror")
-    .run(run);
+.module("weather")
+.run(run);
 
 run.$inject = ["WeatherIconService"];
 

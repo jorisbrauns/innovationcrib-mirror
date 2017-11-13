@@ -1,10 +1,18 @@
 angular
-    .module('mirror')
+    .module('weather')
     .factory('WeatherService', weatherService);
 
 weatherService.$inject = ["$http", "UrlService"];
 
 function weatherService($http, UrlService) {
+
+    function _setLocation(location) {
+        UrlService.setLocation(location);
+    }
+
+    function _setUnit(unit) {
+        UrlService.setUnit(unit);
+    }
 
     function _getCurrent() {
         return $http({
@@ -20,9 +28,10 @@ function weatherService($http, UrlService) {
         });
     }
 
-
     return {
         forecast: _getForecast,
         current: _getCurrent,
+        setLocation: _setLocation,
+        setUnit: _setUnit
     }
 }

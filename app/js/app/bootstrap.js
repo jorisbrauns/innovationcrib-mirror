@@ -1,3 +1,3 @@
-
-			angular.module('mirror', []);
-           
+angular.module('mirror', [
+    'weather'
+]);           
